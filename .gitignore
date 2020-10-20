@@ -1,0 +1,16 @@
+*.xml
+*.iml
+.ipynb_checkpoints
+pycache/
+
+/notebooks
+/credentials
+/data
+
+/miniconda3/
+/config/
+/sparkify_airflow/airflow/src/logs/
+/sparkify_airflow/airflow/src/airflow.db
+/sparkify_airflow/airflow/src/unittests.cfg
+/sparkify_airflow/airflow/src/airflow-webserver.pid
+/.idea/
