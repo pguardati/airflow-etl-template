@@ -3,10 +3,10 @@ import configparser
 import unittest
 import psycopg2
 
-from sparkify_airflow.constants import CONFIG_PATH_DWH_CURRENT, logging
-from sparkify_airflow.redshift.scripts import create_tables
-from sparkify_airflow.redshift.src import utils
-from sparkify_airflow.redshift.tests import utils_tests
+from airflow_etl_template.constants import CONFIG_PATH_DWH_CURRENT, logging
+from airflow_etl_template.redshift.scripts import create_tables
+from airflow_etl_template.redshift.src import utils
+from airflow_etl_template.redshift.tests import utils_tests
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)

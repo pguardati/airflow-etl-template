@@ -9,8 +9,8 @@ pycache/
 
 /miniconda3/
 /config/
-/sparkify_airflow/airflow/src/logs/
-/sparkify_airflow/airflow/src/airflow.db
-/sparkify_airflow/airflow/src/unittests.cfg
-/sparkify_airflow/airflow/src/airflow-webserver.pid
+/airflow_etl_template/airflow/src/logs/
+/airflow_etl_template/airflow/src/airflow.db
+/airflow_etl_template/airflow/src/unittests.cfg
+/airflow_etl_template/airflow/src/airflow-webserver.pid
 /.idea/

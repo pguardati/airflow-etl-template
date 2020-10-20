@@ -4,9 +4,9 @@ import argparse
 import sys
 import pandas as pd
 
-from sparkify_airflow.redshift.src.sql_queries import star_tables, staging_tables
-from sparkify_airflow.redshift.src.utils import get_top_elements_from_table, get_log_errors
-from sparkify_airflow.constants import CONFIG_PATH_DWH_CURRENT, logging
+from airflow_etl_template.redshift.src.sql_queries import star_tables, staging_tables
+from airflow_etl_template.redshift.src.utils import get_top_elements_from_table, get_log_errors
+from airflow_etl_template.constants import CONFIG_PATH_DWH_CURRENT, logging
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)

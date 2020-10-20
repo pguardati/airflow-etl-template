@@ -3,7 +3,7 @@ from airflow import settings
 from airflow.models import Connection
 from airflow.hooks.base_hook import BaseHook
 
-from sparkify_airflow.constants import CONFIG_PATH_DWH_CURRENT, logging
+from airflow_etl_template.constants import CONFIG_PATH_DWH_CURRENT, logging
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)

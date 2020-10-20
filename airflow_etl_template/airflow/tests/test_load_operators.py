@@ -7,12 +7,12 @@ from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.models.taskinstance import TaskInstance
 
-from sparkify_airflow.constants import DIR_DATA_TEST, CONFIG_PATH_DWH_CURRENT, VIZ_TEST
-from sparkify_airflow.redshift.src import sql_queries, utils
-from sparkify_airflow.redshift.tests import utils_tests
-from sparkify_airflow.airflow.src.plugins.operators.load_fact import LoadFactOperator
-from sparkify_airflow.airflow.src.plugins.operators.load_dimension import LoadDimensionOperator
-from sparkify_airflow.redshift.scripts import create_tables
+from airflow_etl_template.constants import DIR_DATA_TEST, CONFIG_PATH_DWH_CURRENT, VIZ_TEST
+from airflow_etl_template.redshift.src import sql_queries, utils
+from airflow_etl_template.redshift.tests import utils_tests
+from airflow_etl_template.airflow.src.plugins.operators.load_fact import LoadFactOperator
+from airflow_etl_template.airflow.src.plugins.operators.load_dimension import LoadDimensionOperator
+from airflow_etl_template.redshift.scripts import create_tables
 
 config = configparser.ConfigParser()
 config.read(CONFIG_PATH_DWH_CURRENT)

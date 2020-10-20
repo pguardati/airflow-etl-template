@@ -7,11 +7,11 @@ from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.models.taskinstance import TaskInstance
 
-from sparkify_airflow.constants import DIR_DATA_TEST, CONFIG_PATH_DWH_CURRENT, VIZ_TEST, logging
-from sparkify_airflow.redshift.src import sql_queries, utils
-from sparkify_airflow.redshift.tests import utils_tests
-from sparkify_airflow.redshift.scripts import create_tables
-from sparkify_airflow.airflow.src.plugins.operators.data_quality import DataQualityOperator
+from airflow_etl_template.constants import DIR_DATA_TEST, CONFIG_PATH_DWH_CURRENT, VIZ_TEST, logging
+from airflow_etl_template.redshift.src import sql_queries, utils
+from airflow_etl_template.redshift.tests import utils_tests
+from airflow_etl_template.redshift.scripts import create_tables
+from airflow_etl_template.airflow.src.plugins.operators.data_quality import DataQualityOperator
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

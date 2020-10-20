@@ -1,5 +1,5 @@
 import configparser
-from sparkify_airflow.constants import CONFIG_PATH_DWH_CURRENT
+from airflow_etl_template.constants import CONFIG_PATH_DWH_CURRENT
 
 # CONFIG
 config = configparser.ConfigParser()

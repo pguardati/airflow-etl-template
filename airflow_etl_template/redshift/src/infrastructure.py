@@ -1,7 +1,7 @@
 import boto3
 import json
 import configparser
-from sparkify_airflow.constants import logging
+from airflow_etl_template.constants import logging
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -159,13 +159,16 @@ class CloudInfrastructureConstructor:
         security_group = _get_security_group(vpc, self.dwh_security_group_id)
 
         # enable security groups to access dwh
-        security_group.authorize_ingress(
-            GroupName=security_group.group_name,
-            CidrIp='0.0.0.0/0',
-            IpProtocol='TCP',
-            FromPort=int(self.db_port),
-            ToPort=int(self.db_port)
-        )
+        try:
+            security_group.authorize_ingress(
+                GroupName=security_group.group_name,
+                CidrIp='0.0.0.0/0',
+                IpProtocol='TCP',
+                FromPort=int(self.db_port),
+                ToPort=int(self.db_port)
+            )
+        except Exception as e:
+            print(e) # avoid stopping execution if user already has the permissions
 
     def export_dwh_current_config(
             self,

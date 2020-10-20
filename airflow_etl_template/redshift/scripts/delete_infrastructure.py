@@ -1,8 +1,8 @@
 import argparse
 import sys
 
-from sparkify_airflow.redshift.src.infrastructure import CloudInfrastructureDestructor
-from sparkify_airflow.constants import CONFIG_PATH_DWH_CURRENT
+from airflow_etl_template.redshift.src.infrastructure import CloudInfrastructureDestructor
+from airflow_etl_template.constants import CONFIG_PATH_DWH_CURRENT
 
 
 def parse_input(args):

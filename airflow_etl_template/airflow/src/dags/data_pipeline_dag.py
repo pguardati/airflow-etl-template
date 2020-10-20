@@ -2,11 +2,11 @@ from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.operators.dummy_operator import DummyOperator
 
-from sparkify_airflow.redshift.src import sql_queries
-from sparkify_airflow.airflow.src.plugins.operators.stage_redshift import StageToRedshiftOperator
-from sparkify_airflow.airflow.src.plugins.operators.load_fact import LoadFactOperator
-from sparkify_airflow.airflow.src.plugins.operators.load_dimension import LoadDimensionOperator
-from sparkify_airflow.airflow.src.plugins.operators.data_quality import DataQualityOperator
+from airflow_etl_template.redshift.src import sql_queries
+from airflow_etl_template.airflow.src.plugins.operators.stage_redshift import StageToRedshiftOperator
+from airflow_etl_template.airflow.src.plugins.operators.load_fact import LoadFactOperator
+from airflow_etl_template.airflow.src.plugins.operators.load_dimension import LoadDimensionOperator
+from airflow_etl_template.airflow.src.plugins.operators.data_quality import DataQualityOperator
 
 """Direct Acyclic Graph that codes the ETL process
 from s3 to staging tables,
@@ -23,7 +23,7 @@ default_args = {
     'catchup': False
 }
 
-dag = DAG('SparkifyRedshiftPipeline',
+dag = DAG('TemplateDataPipeline',
           default_args=default_args,
           description='Load and transform data in Redshift with Airflow',
           schedule_interval='@hourly',

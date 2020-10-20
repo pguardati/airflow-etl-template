@@ -4,9 +4,9 @@ import configparser
 import psycopg2
 from pandas.testing import assert_frame_equal
 
-from sparkify_airflow.constants import CONFIG_PATH_DWH_CURRENT, DIR_DATA_TEST, logging
-from sparkify_airflow.redshift.scripts import create_tables
-from sparkify_airflow.redshift.tests import utils_tests
+from airflow_etl_template.constants import CONFIG_PATH_DWH_CURRENT, DIR_DATA_TEST, logging
+from airflow_etl_template.redshift.scripts import create_tables
+from airflow_etl_template.redshift.tests import utils_tests
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)

@@ -2,8 +2,8 @@ import configparser
 import numpy as np
 import pandas as pd
 
-from sparkify_airflow.redshift.src import sql_queries, utils
-from sparkify_airflow.constants import CONFIG_PATH_DWH_CURRENT
+from airflow_etl_template.redshift.src import sql_queries, utils
+from airflow_etl_template.constants import CONFIG_PATH_DWH_CURRENT
 
 # CONFIG
 config = configparser.ConfigParser()
